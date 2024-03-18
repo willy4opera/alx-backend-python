@@ -5,13 +5,13 @@ import asyncio
 from typing import List
 
 
-rand_task_wait = __import__('3-tasks').rand_task_wait
+task_wait_random = __import__('3-tasks').task_wait_random
 
 
 async def task_wait_n(n: int, max_delay: int) -> List[float]:
-    '''Executes rand_task_wait n times.
+    '''Executes task_wait_random n times.
     '''
     time_wait = await asyncio.gather(
-        *tuple(map(lambda _: rand_task_wait(max_delay), range(n)))
+        *tuple(map(lambda _: task_wait_random(max_delay), range(n)))
     )
     return sorted(time_wait)

@@ -6,7 +6,6 @@ import asyncio
 import random
 
 
-
 async def async_generator():
     '''Here, we generated a sequence of 10 numbers.ls
     '''
